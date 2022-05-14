@@ -130,3 +130,5 @@ dmypy.json
 
 # Pelican output folder
 output/
+# Folder with static files
+content/images/
