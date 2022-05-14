@@ -6,7 +6,7 @@
         <h1 class="name">{% if NAME %}{{NAME}}{% else %}Alan Doe{% endif %}</h1>
         <h3 class="tagline">{% if TAGLINE %}{{TAGLINE}}{% else %}Full Stack Developer{% endif %}</h3>
         {% if PDF %}
-        <a class="btn btn-primary" href='{{ SITEURL }}/{{ PDF }}' target="_blank">Сохранить в PDF</a>
+        <a class="btn btn-primary" href='{{ SITEURL }}/static/{{ PDF }}' target="_blank">Сохранить в PDF</a>
         {% endif %}
     </div><!--//profile-container-->
     
