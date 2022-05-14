@@ -8,6 +8,7 @@ pelican = "*"
 markdown = "*"
 
 [dev-packages]
+weasyprint = "*"
 
 [requires]
 python_version = "3.9"
