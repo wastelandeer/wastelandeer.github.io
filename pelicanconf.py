@@ -1,8 +1,18 @@
+import os
+import sys
+sys.path.append(os.curdir)
+from pdfgen import (NAME, TAGLINE, PIC, EMAIL, LINKEDIN, GITHUB, TELEGRAM,
+    EDUCATIONS, LANGUAGES, INTERESTS, EXPERIENCES, SKILLS)
+
 AUTHOR = 'wastelandeer'
 SITENAME = 'Resume project'
 SITEURL = ''
 
 PATH = 'content'
+STATIC_PATHS = ['images']
+EXTRA_PATH_METADATA = {
+    'images/resume.pdf': {'path': 'static/resume.pdf'},
+}
 
 TIMEZONE = 'Europe/Moscow'
 
@@ -19,7 +29,7 @@ AUTHOR_FEED_RSS = None
 LINKS = (('Pelican', 'https://getpelican.com/'),
          ('Python.org', 'https://www.python.org/'),
          ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+         ('You can modify those links in your config file', '#'),) 
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
@@ -33,3 +43,5 @@ DEFAULT_PAGINATION = False
 # Hold theme folder inside "content" folder
 IGNORE_FILES = ['theme']
 
+PDF = 'resume.pdf'
+OPEN_TO_WORK = False
