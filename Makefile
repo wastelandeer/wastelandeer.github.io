@@ -6,6 +6,9 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
+PDFCONF=$(BASEDIR)/pdfgen.py
+PDFGEN?=weasyprint
+PDFPATH=$(INPUTDIR)/images
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 GITHUB_PAGES_BRANCH=main
@@ -49,6 +52,10 @@ help:
 
 html:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+
+pdf:
+	"$(PELICAN)" -s "$(PDFCONF)"
+	"$(PDFGEN)" -q "$(OUTPUTDIR)/index.html" "$(PDFPATH)/resume.pdf"
 
 clean:
 	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)"
