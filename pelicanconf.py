@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.append(os.curdir)
 from pdfgen import (NAME, TAGLINE, PIC, EMAIL, LINKEDIN, GITHUB, TELEGRAM,
-    EDUCATIONS, LANGUAGES, INTERESTS, EXPERIENCES, SKILLS)
+    EDUCATIONS, LANGUAGES, INTERESTS, EXPERIENCES, SKILLS, THEME)
 
 AUTHOR = 'wastelandeer'
 SITENAME = 'Resume project'
