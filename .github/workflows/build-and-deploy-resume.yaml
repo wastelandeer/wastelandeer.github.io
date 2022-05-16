@@ -1,0 +1,5 @@
+name: Build pelican based resume and push it to GitHub Pages
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
