@@ -50,10 +50,10 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-html:
+html: clean
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
-pdf:
+pdf: clean
 	"$(PELICAN)" -s "$(PDFCONF)"
 	"$(PDFGEN)" -q "$(OUTPUTDIR)/index.html" "$(PDFPATH)/resume.pdf"
 
