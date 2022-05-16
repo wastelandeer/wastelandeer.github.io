@@ -1,0 +1,29 @@
+name: Build and deploy resume
+description: Hell
+runs:
+  using: composite
+  steps:
+    - name: Generate pdf
+      run: make pdf
+      shell: bash
+    - name: Generate resume
+      run: make html
+      shell: bash
+    - name: Publish to GH Pages
+      run: |
+        remote_repo="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        remote_branch=${GH_PAGES_BRANCH:=gh-pages}
+        pushd output
+        git init
+        git remote add deploy "$remote_repo"
+        git checkout $remote_branch || git checkout --orphan $remote_branch
+        git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git add .
+        echo -n 'Files to Commit:' && ls -l | wc -l
+        git commit -m "[ci skip] Automated deployment to GitHub Pages on $(date +%s%3N)"
+        git push deploy $remote_branch --force
+        rm -fr .git
+        popd
+      shell: bash
+    
