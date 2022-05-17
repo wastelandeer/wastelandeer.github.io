@@ -18,6 +18,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv typing-extensions
     - name: Install python dependencies
-      run: pipenv install --system --deploy --ignore-pipfile
+      run: pipenv install --system --deploy --dev --ignore-pipfile
     - name: Build resume and deploy
       uses: ./.github/actions/build-and-deploy
