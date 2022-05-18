@@ -53,12 +53,15 @@ help:
 html: clean
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
-pdf: clean
+pdf: make-dir clean
 	"$(PELICAN)" -s "$(PDFCONF)"
 	"$(PDFGEN)" -q "$(OUTPUTDIR)/index.html" "$(PDFPATH)/resume.pdf"
 
 clean:
 	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)"
+
+make-dir:
+	[ -d "$(INPUTDIR)/images" ] || mkdir -p "$(INPUTDIR)/images"
 
 regenerate:
 	"$(PELICAN)" -r "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
