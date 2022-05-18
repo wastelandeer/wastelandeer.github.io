@@ -13,6 +13,10 @@ runs:
       run: |
         remote_repo="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         remote_branch=${GH_PAGES_BRANCH:=gh-pages}
+        echo $remote_repo
+        echo $remote_branch
+        echo $GITHUB_REPOSITORY
+        echo $GITHUB_ACTOR
         pushd output
         git init
         git remote add deploy "$remote_repo"

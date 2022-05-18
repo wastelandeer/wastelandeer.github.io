@@ -21,3 +21,5 @@ jobs:
       run: pipenv install --system --deploy --dev --ignore-pipfile
     - name: Build resume and deploy
       uses: ./.github/actions/build-and-deploy
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
