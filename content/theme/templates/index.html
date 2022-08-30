@@ -1,20 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="wrapper">
+    <div class="wrapper">
+{% if OPEN_TO_WORK %}
     {% include 'includes/sidebar.html' %}
-    <div class="main-wrapper">
-       
-        {% include 'includes/career-profile.html' %}
-                    
-        {% include 'includes/experience.html' %}
-                    
-        {% include 'includes/projects.html' %}
-                    
-        {% include 'includes/skills.html' %}
+        <div class="main-wrapper">
         
-    </div><!--//main-body-->
-</div>
+            {% include 'includes/career-profile.html' %}
+                        
+            {% include 'includes/experience.html' %}
+                        
+            {% include 'includes/projects.html' %}
+                        
+            {% include 'includes/skills.html' %}
+            
+        </div><!--//main-body-->
+    </div>
+{% else %}
+    {% include 'includes/stub.html' %}
+{% endif %}
 
 {% endblock %}
