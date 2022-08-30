@@ -9,6 +9,7 @@ markdown = "*"
 
 [dev-packages]
 weasyprint = "*"
+envparse = "*"
 
 [requires]
 python_version = "3.9"
