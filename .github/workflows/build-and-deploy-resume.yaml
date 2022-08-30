@@ -23,3 +23,7 @@ jobs:
       uses: ./.github/actions/build-and-deploy
       env:
         GITHUB_TOKEN: ${{secrets.DEPLOY_TOKEN}}
+        EMAIL: ${{secrets.EMAIL}}
+        LINKEDIN: ${{secrets.LINKEDIN}}
+        TELEGRAM: ${{secrets.TELEGRAM}}
+        GITHUB: ${{secrets.GITHUB}}
