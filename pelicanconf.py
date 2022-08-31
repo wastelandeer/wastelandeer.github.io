@@ -44,4 +44,4 @@ DEFAULT_PAGINATION = False
 IGNORE_FILES = ['theme']
 
 PDF = 'resume.pdf'
-OPEN_TO_WORK = True
+OPEN_TO_WORK = False
