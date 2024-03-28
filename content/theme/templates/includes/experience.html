@@ -1,7 +1,8 @@
 {% if EXPERIENCES %}
+<!-- {% set lang = LANG %} -->
 <section class="section experiences-section">
     <h2 class="section-title"><i class="nf nf-mdi-worker"></i>Experiences</h2>
-    {% for experience in EXPERIENCES %}
+    {% for experience in EXPERIENCES[LANG] %}
         <div class="item">
             <div class="meta">
                 <div class="upper-row">
