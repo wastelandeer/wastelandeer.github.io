@@ -3,6 +3,7 @@ import sys
 sys.path.append(os.curdir)
 # from settings import EMAIL, LINKEDIN, GITHUB, TELEGRAM
 import settings
+from settings import OPEN_TO_WORK, LANG
 
 AUTHOR = 'wastelandeer'
 SITENAME = 'Resume project'
@@ -18,76 +19,147 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 THEME = 'content/theme'
 IGNORE_FILES = ['theme']
+
 # Resume info
-NAME = 'Виталий Грищенков'
+NAME = {
+    'ru': 'Виталий Грищенков',
+    'en': 'Vitaliy Grishchenkov'
+}
 TAGLINE = 'QA Automation Engineer'
 PIC = 'Avatara.jpg'
 EMAIL = settings.EMAIL
 LINKEDIN = settings.LINKEDIN
 GITHUB = settings.GITHUB
 TELEGRAM = settings.TELEGRAM
-EDUCATIONS = [
-    {
-        'degree': 'История',
-        'meta': 'Волгоградский Государственный Университет',
-        'time': '2001-2007'
-    },
-    {
-        'degree': 'Средняя школа',
-        'meta': '',
-        'time': '2001'
-    }
-]
-LANGUAGES = [
-    {
-        'name': 'Русский',
-        'description': 'Родной язык'
-    },
-    {
-        'name': 'Английский',
-        'description': 'Itermediate B1'
-    }
-]
-INTERESTS = ['Игры', 'Чтение', 'Кино']
-EXPERIENCES = [
-    {
-        'job_title': 'QA Automation Engineer',
-        'time': 'Февраль 2022 - Июнь 2022',
-        'company': 'Playrix',
-        'details': 'Продолжил закрывать зону ответственности по ручному тестированию. Разрабатываю автоматизированные UI тесты. Поддерживаю и развиваю тестовый фреймворк на базе Python и RobotFramework.'
-    },
-    {
-        'job_title': 'QA Engineer',
-        'time': 'Ноябрь 2019 - Февраль 2022',
-        'company': 'Playrix',
-        'details': 'Занимался ручным тестированием внутренних веб-сервисов компании. Тестировал и frontend, и backend. Проводил технические интервью при найме новых сотрудников. Участвовал в планировании разработки новых сервисов и новой функциональности существующих сервисов. Был наставником для новых коллег. Разрабатывал и поддерживал тестовую документацию. Занимался нагрузочным тестированием внутренних сервисов.'
-    },
-    {
-        'job_title': 'QA Engineer',
-        'time': 'Июнь 2018 - Ноябрь 2019',
-        'company': 'Playrix',
-        'details': 'Занимался ручным тестированием внутренних утилит. Занимался тестированием "движка" компании. Разрабатывал и поддерживал в актуальном состоянии тестовую документацию.'
-    },
-    {
-        'job_title': 'QA Outsource',
-        'time': 'Октябрь 2017 - Июнь 2018',
-        'company': 'Playrix',
-        'details': 'Занимался ручным тестированием игровых проектов компании. Проверял исправление багов. Проверял функциональность по готовым тест-кейсам. Тестировал корректность локализации.'
-    },
-    {
-        'job_title': 'System Administrator',
-        'time': 'Сентябрь 2010 - Ноябрь 2013',
-        'company': 'СТК',
-        'details': 'Администрировал Linux/Windows сервера. Администрировал сетевое оборудование. Обеспечивал техническую поддержку пользователей.'
-    }
-]
+
+EDUCATIONS = {
+    'ru': [
+        {
+            'degree': 'История',
+            'meta': 'Волгоградский Государственный Университет',
+            'time': '2001-2007'
+        },
+        {
+            'degree': 'Средняя школа',
+            'meta': '',
+            'time': '2001'
+        }
+    ],
+    'en': [
+        {
+            'degree': 'History',
+            'meta': 'Volgograd State University',
+            'time': '2001-2007'
+        },
+        {
+            'degree': 'High school',
+            'meta': '',
+            'time': '2001'
+        }
+    ]
+}
+
+LANGUAGES = {
+    'ru': [
+        {
+            'name': 'Русский',
+            'description': 'Родной язык'
+        },
+        {
+            'name': 'Английский',
+            'description': 'Itermediate B1'
+        }
+    ],
+    'en': [
+        {
+            'name': 'Russian',
+            'description': 'Native language'
+        },
+        {
+            'name': 'English',
+            'description': 'Itermediate B1'
+        }
+    ]
+}
+
+INTERESTS = {
+    'ru': ['Игры', 'Чтение', 'Кино'],
+    'en': ['Video games', 'Science fiction', 'Fantasy', 'Great movies']
+}
+EXPERIENCES = {
+    'ru': [
+        {
+            'job_title': 'QA Automation Engineer',
+            'time': 'Февраль 2022 - Июнь 2022',
+            'company': 'Playrix',
+            'details': 'Продолжил закрывать зону ответственности по ручному тестированию. Разрабатывал автоматизированные UI тесты. Поддерживал и развивал тестовый фреймворк на базе Python и RobotFramework.'
+        },
+        {
+            'job_title': 'QA Engineer',
+            'time': 'Ноябрь 2019 - Февраль 2022',
+            'company': 'Playrix',
+            'details': 'Занимался ручным тестированием внутренних веб-сервисов компании. Тестировал и frontend, и backend. Проводил технические интервью при найме новых сотрудников. Участвовал в планировании разработки новых сервисов и новой функциональности существующих сервисов. Был наставником для новых коллег. Разрабатывал и поддерживал тестовую документацию. Занимался нагрузочным тестированием внутренних сервисов.'
+        },
+        {
+            'job_title': 'QA Engineer',
+            'time': 'Июнь 2018 - Ноябрь 2019',
+            'company': 'Playrix',
+            'details': 'Занимался ручным тестированием внутренних утилит. Занимался тестированием "движка" компании. Разрабатывал и поддерживал в актуальном состоянии тестовую документацию.'
+        },
+        {
+            'job_title': 'QA Outsource',
+            'time': 'Октябрь 2017 - Июнь 2018',
+            'company': 'Playrix',
+            'details': 'Занимался ручным тестированием игровых проектов компании. Проверял исправление багов. Проверял функциональность по готовым тест-кейсам. Тестировал корректность локализации.'
+        },
+        {
+            'job_title': 'System Administrator',
+            'time': 'Сентябрь 2010 - Ноябрь 2013',
+            'company': 'СТК',
+            'details': 'Администрировал Linux/Windows сервера. Администрировал сетевое оборудование. Обеспечивал техническую поддержку пользователей.'
+        }
+    ],
+    'en': [
+        {
+            'job_title': 'QA Automation Engineer',
+            'time': 'February 2022 - June 2022',
+            'company': 'Playrix',
+            'details': 'Continued to cover the area of responsibility for manual testing. Developed automated UI tests. Maintained and further developed a testing framework based on Python and RobotFramework.'
+        },
+        {
+            'job_title': 'QA Engineer',
+            'time': 'November 2019 - February 2022',
+            'company': 'Playrix',
+            'details': 'I was involved in manual testing of internal web services of the company both on frontend and backend side. I conducted technical interviews when hiring new employees. Participated in planning the development of new services and new functionality for existing services. Acted as a mentor for new colleagues. Developed and maintained testing documentation. I started load testing of internal services in our team.'
+        },
+        {
+            'job_title': 'QA Engineer',
+            'time': 'June 2018 - November 2019',
+            'company': 'Playrix',
+            'details': 'I was involved in manual testing of internal utilities. Conducted testing of the companys "engine". Developed and maintained up-to-date testing documentation.'
+        },
+        {
+            'job_title': 'QA Outsource',
+            'time': 'October 2017 - June 2018',
+            'company': 'Playrix',
+            'details': 'I was involved in manual testing of the company gaming projects. Verified bug fixes. Checked functionality against prepared test cases. Tested the correctness of localization.'
+        },
+        {
+            'job_title': 'System Administrator',
+            'time': 'September 2010 - November 2013',
+            'company': 'STK',
+            'details': 'Administered Linux/Windows servers. Administered network equipment. Provided technical support to users.'
+        }
+    ]
+}
+
 SKILLS = [
     {
-        'title': 'Ручное тестирование',
+        'title': 'Manual testing',
         'level': '50'
     },
     {
-        'title': 'Автоматизированное тестирование',
+        'title': 'Automated testing',
         'level': '50'
     },
     {
@@ -123,7 +195,7 @@ SKILLS = [
         'level': '50'
     },
     {
-        'title': 'CI/CD',
+        'title': 'CI/CD pipeline',
         'level': '50'
     },
     {
@@ -164,6 +236,30 @@ SKILLS = [
     },
     {
         'title': 'Github',
+        'level': '50'
+    },
+    {
+        'title': 'Java',
+        'level': '50'
+    },
+    {
+        'title': 'Kotlin',
+        'level': '50'
+    },
+    {
+        'title': 'Gitlab',
+        'level': '50'
+    },
+    {
+        'title': 'Grpc API',
+        'level': '50'
+    },
+    {
+        'title': 'JUnit',
+        'level': '50'
+    },
+    {
+        'title': 'Testcontainers',
         'level': '50'
     }
 ]

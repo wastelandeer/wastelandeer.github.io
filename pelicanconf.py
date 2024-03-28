@@ -3,6 +3,7 @@ import sys
 sys.path.append(os.curdir)
 from pdfgen import (NAME, TAGLINE, PIC, EMAIL, LINKEDIN, GITHUB, TELEGRAM,
     EDUCATIONS, LANGUAGES, INTERESTS, EXPERIENCES, SKILLS, THEME)
+from settings import OPEN_TO_WORK, LANG
 
 AUTHOR = 'wastelandeer'
 SITENAME = 'Resume project'
@@ -44,4 +45,3 @@ DEFAULT_PAGINATION = False
 IGNORE_FILES = ['theme']
 
 PDF = 'resume.pdf'
-OPEN_TO_WORK = False
