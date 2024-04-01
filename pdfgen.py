@@ -89,6 +89,12 @@ INTERESTS = {
 EXPERIENCES = {
     'ru': [
         {
+            'job_title': 'Senior QA Engineer',
+            'time': 'Август 2022 - Настоящее время',
+            'company': 'Тиньков Центр Разработки Минск',
+            'details': 'Стартовал интеграционное автоматизированное тестирование в команде разработки. Закрываю задачи по ручному тестированию. Самостоятельно чиню небольшие баги. Пишу при необходимости функционал, облегчающий тестирование систем. Провожу код-ревью разрабатываемых фич. Представляю роль QA в активности "три амиго". Взаимодействую с внешними поставщиками сервисов и добиваюсь починки багов, обнаруженных во время тестирования интеграции с ними.'
+        },
+        {
             'job_title': 'QA Automation Engineer',
             'time': 'Февраль 2022 - Июнь 2022',
             'company': 'Playrix',
@@ -120,6 +126,12 @@ EXPERIENCES = {
         }
     ],
     'en': [
+        {
+            'job_title': 'Senior QA Engineer',
+            'time': 'August 2022 - Present time',
+            'company': 'Tinkov Development Center',
+            'details': 'I have founded integration automated testing within the development team. I am managing tasks for manual testing. I am writing functionality, if necessary, to facilitate system testing. I am conducting code reviews of developed features and representing the QA role in "three amigos" activities. I am interacting with external service providers and ensuring the fixing of bugs identified during integration testing with them.'
+        },
         {
             'job_title': 'QA Automation Engineer',
             'time': 'February 2022 - June 2022',
@@ -260,6 +272,10 @@ SKILLS = [
     },
     {
         'title': 'Testcontainers',
+        'level': '50'
+    },
+    {
+        'title': 'Allure Test Ops',
         'level': '50'
     }
 ]
